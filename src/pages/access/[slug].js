@@ -62,17 +62,17 @@ function AccessDetail({ data }) {
         <TinaMarkdown content={data.accessDescription} />
         <div
           id="carouselExampleIndicators"
-          class="carousel carousel-dark mt-5"
+          className="carousel carousel-dark mt-5"
           data-bs-ride="false"
         >
-          <div class="carousel-indicators">
+          <div className="carousel-indicators">
             {data.accessContent.map((content, index) => {
               return (
                 <button
                   type="button"
                   data-bs-target="#carouselExampleIndicators"
                   data-bs-slide-to={index}
-                  class={index === 0 ? "active" : ""}
+                  className={index === 0 ? "active" : ""}
                   aria-current="true"
                   aria-label={`Slide ${index}`}
                   key={index}
@@ -80,7 +80,7 @@ function AccessDetail({ data }) {
               );
             })}
           </div>
-          <div class="carousel-inner">
+          <div className="carousel-inner">
             {data.accessContent.map((content, index) => {
               return (
                 <div
@@ -94,7 +94,7 @@ function AccessDetail({ data }) {
                     alt={content.contentDescription}
                   />
                   <div
-                    class={`carousel-access-caption carousel-caption text-center d-block`}
+                    className={`carousel-access-caption carousel-caption text-center d-block`}
                   >
                     <h4>{content.contentDescription}</h4>
                   </div>
@@ -103,22 +103,22 @@ function AccessDetail({ data }) {
             })}
           </div>
           <button
-            class="carousel-control-prev"
+            className="carousel-control-prev"
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev"
           >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
           </button>
           <button
-            class="carousel-control-next"
+            className="carousel-control-next"
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next"
           >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
           </button>
         </div>
       </section>

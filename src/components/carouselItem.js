@@ -23,6 +23,8 @@ function CarouselItem({ item, index }) {
         alt={item.carouselTitle}
         className="carousel-home-img"
         fill={true}
+        placeholder="blur"
+        blurDataURL={`data:image/jpeg;base64,${item.carouselImage}`}
       ></Image>
       <div className="container">
         {item.carouselText.children.length !== 0 && (

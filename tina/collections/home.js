@@ -45,6 +45,11 @@ const homepageSchema = {
           required: true,
         },
         {
+          type: "string",
+          name: "carouselImageFit",
+          label: "Carousel Image Fit"
+        },
+        {
           type: "rich-text",
           name: "carouselText",
           label: "Carousel Text",

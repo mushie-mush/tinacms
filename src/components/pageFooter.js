@@ -35,8 +35,6 @@ function PageFooter() {
     fetchData();
   }, []);
 
-  console.log(data);
-
   return (
     <section className={`container pt-0`}>
       <div className={`row page-footer`}>
