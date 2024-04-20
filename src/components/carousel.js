@@ -5,10 +5,10 @@ function Carousel({ items }) {
   return (
     <div
       id="myCarousel"
-      className="carousel slide mb-6"
+      className="carousel carousel-home slide mb-6"
       data-bs-ride="carousel"
     >
-      <div className="carousel-inner">
+      <div className="carousel-inner carousel-home-inner">
         {items.map((item, index) => (
           <CarouselItem item={item} key={index} index={index} />
         ))}

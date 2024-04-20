@@ -1,31 +1,17 @@
-import Image from "next/image";
 import React from "react";
+import Card from "./card";
+import FacilityCard from "./facilityCard";
 
-function Cards({ items }) {
+function Cards({ items, category }) {
   return (
-    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      {items.map((item, index) => {
-        return (
-          <div className="col" key={index}>
-            <div className="card shadow-sm">
-              <div
-                className="card-img-top position-relative"
-                style={{ height: "300px" }}
-              >
-                <Image
-                  src={item.node.banner}
-                  alt={item.node.title}
-                  fill={true}
-                />
-              </div>
-              <div className="card-body">
-                <h3>{item.node.title}</h3>
-                <p className="card-text">{item.node.subtitle}</p>
-              </div>
-            </div>
-          </div>
-        );
-      })}
+    <div className="row cards mt-4 mb-4">
+      {items.map((item, index) =>
+        category === "facility" ? (
+          <FacilityCard item={item} key={index} />
+        ) : (
+          <Card item={item} category={category} key={index} />
+        )
+      )}
     </div>
   );
 }

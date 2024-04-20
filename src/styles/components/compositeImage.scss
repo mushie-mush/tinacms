@@ -1,0 +1,54 @@
+.img-container {
+  width: 80%;
+  min-height: 25rem;
+  margin-left: auto;
+  height: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #ffd361;
+  }
+
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  & .img {
+    position: absolute !important;
+    width: 60%;
+    height: 20rem;
+    max-height: 70%;
+    object-fit: cover;
+    opacity: 1;
+    transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+
+    @media only screen and (max-width: 992px) {
+      height: 18rem;
+    }
+
+    &.img-about-01 {
+      top: 0;
+      right: 0;
+    }
+
+    &.img-about-02 {
+      top: 30%;
+      left: 0;
+    }
+
+    &:hover {
+      z-index: 10;
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

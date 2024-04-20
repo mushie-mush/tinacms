@@ -4,6 +4,11 @@ const nextConfig = {
   images: {
     domains: ["assets.tina.io"],
   },
+  experimental: {
+    images: {
+      allowFutureImage: true,
+    },
+  },
 };
 
 module.exports = nextConfig;

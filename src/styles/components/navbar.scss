@@ -1,0 +1,87 @@
+.navbar {
+  box-shadow: 0 3px 5px rgba(00, 00, 00, 0.2);
+}
+
+.navbar-collapse {
+  @media only screen and (max-width: 992px) {
+    font-size: 1.2rem;
+    margin-top: 4rem;
+    transition: 0.2s;
+  }
+}
+
+.navbar-collapse.show {
+  margin-top: 4rem;
+}
+
+.navbar-toggler {
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.nav-link {
+  position: relative;
+  margin-right: 2rem;
+
+  @media only screen and (max-width: 992px) {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0d3b66;
+    transition: 0.2s;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &.active::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0d3b66;
+  }
+}
+
+.navbar-brand {
+  position: relative;
+  height: 1.5rem;
+  width: 1.5rem;
+
+  & .logo {
+    position: absolute;
+    left: 0;
+    top: -0.9rem;
+    height: 6rem;
+    width: 4.5rem;
+    z-index: 5;
+
+    &-back {
+      position: absolute;
+      left: 0;
+      top: -0.9rem;
+      height: 6rem;
+      width: 4.5rem;
+      z-index: -1000;
+      box-shadow: 0 3px 5px rgba(00, 00, 00, 0.2);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.location-contact {
+  min-height: 50rem;
+}
+
+.location-contact-map {
+  height: 100%;
+  width: 100%;
+  max-width: 32rem;
+  max-height: 20rem;
+
+  @media only screen and (max-width: 767px) {
+    max-width: 100%;
+  }
+}
+
+.location-contact-detail {
+  color: #0d3b66;
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+
+  & svg {
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}

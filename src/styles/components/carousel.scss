@@ -1,0 +1,108 @@
+.carousel-home {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 40rem;
+  background-color: #ffd361;
+
+  @media only screen and (max-width: 767px) {
+    height: 30rem;
+  }
+
+  &-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &-inner,
+  &-item {
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+
+  &-caption {
+    background-color: rgba(13, 59, 102, 0.8);
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 600px;
+    height: fit-content;
+    text-align: start;
+    padding: 4rem 2rem;
+    box-shadow: -20px 20px 0 0 #ffd361;
+
+    @media only screen and (max-width: 767px) {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      transform: translateY(0);
+      padding: 4rem 3.5rem;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgba(13, 59, 102, 0.5);
+    }
+  }
+
+  & .carousel-control-next,
+  & .carousel-control-prev {
+    max-width: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffd361;
+
+    @media only screen and (max-width: 767px) {
+      max-width: 50%;
+      width: 50%;
+      height: 3rem;
+      top: 100%;
+      transform: translateY(-100%);
+    }
+  }
+
+  & .button-carousel {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem 2.4rem;
+    margin-top: 2rem;
+    width: fit-content;
+    color: #ffffff;
+    background-color: rgba($color: #ffffff, $alpha: 0);
+    border: 1px solid #ffffff;
+    transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+
+    overflow: hidden;
+    z-index: 2;
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 100%;
+      background-color: #ffffff;
+      transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+      z-index: -1;
+    }
+
+    &:hover::before {
+      right: 0;
+    }
+
+    &:hover {
+      color: #0d3b66;
+    }
+  }
+}

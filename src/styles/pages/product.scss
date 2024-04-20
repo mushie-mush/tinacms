@@ -1,0 +1,92 @@
+.button-interest {
+  width: 75%;
+
+  @media only screen and (max-width: 767px) {
+    width: 100% !important;
+  }
+}
+
+.qr-container {
+  margin: 1rem auto;
+  padding: 2rem;
+  background-color: #0d3b66;
+  color: #ffffff;
+
+  @media only screen and (max-width: 767px) {
+    width: 100% !important;
+  }
+
+  & button {
+    @media only screen and (max-width: 767px) {
+      width: 100% !important;
+    }
+  }
+
+  & h4 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+
+  & img {
+    position: relative !important;
+    width: 50% !important;
+    margin: 1rem;
+
+    @media only screen and (max-width: 767px) {
+      width: 100% !important;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  & a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  & svg {
+    margin-left: 0.5rem;
+  }
+}
+
+.specification {
+  display: flex;
+  margin-bottom: 1rem;
+
+  &-label {
+    font-weight: 500;
+    width: 40%;
+    min-width: 40%;
+    max-width: 40%;
+  }
+}
+
+.floorplan {
+  & img {
+    width: 100%;
+  }
+}
+
+.siteplan {
+  & img {
+    width: 100%;
+  }
+}
+
+.masterplan {
+  & img {
+    width: 100%;
+  }
+}
+
+.button-link {
+  min-width: 20rem;
+  margin-bottom: 0.5rem;
+}

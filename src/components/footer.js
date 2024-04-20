@@ -1,23 +1,66 @@
 import React from "react";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
-    <footer className="footer text-body-secondary py-5">
-      <div className="container">
-        <p className="float-end mb-1">
-          <Link href="">Back to top</Link>
-        </p>
-        <p className="mb-1">
-          Album example is © Bootstrap, but please download and customize it for
-          yourself!
-        </p>
-        <p className="mb-0">
-          New to Bootstrap? <Link href="/">Visit the homepage</Link> or read our{" "}
-          <Link href="/docs/5.3/getting-started/introduction/">
-            getting started guide
-          </Link>
-        </p>
+    <footer className="container">
+      <div className="row footer-menu">
+        <div className="col-md-8">
+          <div className="d-flex footer-nav">
+            <Link href="/" className="nav-item">
+              Beranda
+            </Link>
+            <Link href="/about" className="nav-item">
+              Tentang Kami
+            </Link>
+            <Link href="/products" className="nav-item">
+              Produk
+            </Link>
+            <Link href="/facilities" className="nav-item">
+              Fasilitas
+            </Link>
+            <Link href="/access" className="nav-item">
+              Akses
+            </Link>
+            <Link href="/contact" className="nav-item">
+              Kontak
+            </Link>
+          </div>
+        </div>
+        <div className="col-md-4">
+          <div className="d-flex  footer-social">
+            <a
+              href="https://www.facebook.com/profile.php?id=100071002260687"
+              className="social-item"
+            >
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+            <a
+              href="https://www.instagram.com/grandwisatabekasi_official/"
+              className="social-item"
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a
+              href="https://youtube.com/channel/UCAuOA0btVv_BnEb6-9lfLWA"
+              className="social-item"
+            >
+              <FontAwesomeIcon icon={faYoutube} />
+            </a>
+            <a href="https://vt.tiktok.com/ZGJUXMthB/" className="social-item">
+              <FontAwesomeIcon icon={faTiktok} />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="row footer-brands">
+        <span>© 2021 Grand Wisata Bekasi</span>
+        <img src={"/media/logo_sinarmas.png"} alt=""></img>
       </div>
     </footer>
   );
