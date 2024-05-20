@@ -16,7 +16,7 @@ const globalSchema = {
     {
       type: "object",
       name: "navbar",
-      label: "Navbar",
+      label: "Navigations",
       fields: [
         {
           type: "object",

@@ -188,7 +188,7 @@ export default function Home({ data, contact }) {
         <div className="row mt-5">
           <div className="col-12">
             <h2>Produk Terkini</h2>
-            <Cards items={products} />
+            <Cards items={products} category={`products`} />
             <br />
             <Link className={`button`} href="/products">
               Lebih banyak
