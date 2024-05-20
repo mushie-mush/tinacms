@@ -6,13 +6,13 @@ import client from "tina/__generated__/client";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 function PageFooter() {
-  const [data, setData] = useState();
+    const [data, setData] = useState();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const contactData = await client.request({
-        query: `query global {
-        global(relativePath: "Global.mdx") {
+    useEffect(() => {
+        const fetchData = async () => {
+            const contactData = await client.request({
+                query: `query global {
+        global(relativePath: "Global.json") {
           contact {
             address
             addressMarketingGallery
@@ -27,35 +27,35 @@ function PageFooter() {
           }
         }
       }`,
-      });
+            });
 
-      setData(contactData.data.global.contact);
-    };
+            setData(contactData.data.global.contact);
+        };
 
-    fetchData();
-  }, []);
+        fetchData();
+    }, []);
 
-  return (
-    <section className={`container pt-0`}>
-      <div className={`row page-footer`}>
-        <div className={`col-md-6 page-footer--details`}>
-          <h3>Marketing Gallery Grand Wisata</h3>
-          <TinaMarkdown content={data?.addressMarketingGallery} />
-          <div className="tel">
-            <FontAwesomeIcon icon={faPhoneAlt} />
-            {data?.phone}
-          </div>
-          <div className="mail">
-            <FontAwesomeIcon icon={faEnvelope} />
-            {data?.email}
-          </div>
-        </div>
-        <div className={`col-md-6 page-footer--img`}>
-          <img src={data?.image} alt="" />
-        </div>
-      </div>
-    </section>
-  );
+    return (
+        <section className={`container pt-0`}>
+            <div className={`row page-footer`}>
+                <div className={`col-md-6 page-footer--details`}>
+                    <h3>Marketing Gallery Grand Wisata</h3>
+                    <TinaMarkdown content={data?.addressMarketingGallery} />
+                    <div className="tel">
+                        <FontAwesomeIcon icon={faPhoneAlt} />
+                        {data?.phone}
+                    </div>
+                    <div className="mail">
+                        <FontAwesomeIcon icon={faEnvelope} />
+                        {data?.email}
+                    </div>
+                </div>
+                <div className={`col-md-6 page-footer--img`}>
+                    <img src={data?.image} alt="" />
+                </div>
+            </div>
+        </section>
+    );
 }
 
 export default PageFooter;
